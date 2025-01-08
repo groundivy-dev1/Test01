@@ -1,0 +1,45 @@
+가상 환경 생성
+python -m venv tv1
+
+가상 환경 활성화
+.\tv1\Scripts\activate
+
+권한 에러 발생 시
+2-1. Windows PowerShell 관리자로 실행
+2-2. Set-ExecutionPolicy RemoteSigned 입력 후 Y 입력
+2-3. 다시 활성화 시도
+
+PS C:\test\test_venv1> Set-ExecutionPolicy RemoteSigned
+
+실행 규칙 변경
+실행 정책은 신뢰하지 않는 스크립트로부터 사용자를 보호합니다. 실행 정책을
+변경하면 about_Execution_Policies 도움말
+항목(https://go.microsoft.com/fwlink/?LinkID=135170)에 설명된 보안 위험에
+노출될 수 있습니다. 실행 정책을 변경하시겠습니까?
+[Y] 예(Y)  [A] 모두 예(A)  [N] 아니요(N)  [L] 모두 아니요(L)
+[S] 일시 중단(S)[?] 도움말 (기본값은 "N"): y
+PS C:\test\test_venv1>
+
+PS C:\test\test_venv1> .\tv1\Scripts\activate
+(tv1) PS C:\test\test_venv1>
+(tv1) PS C:\test\test_venv1>
+(tv1) PS C:\test\test_venv1>
+(tv1) PS C:\test\test_venv1> deactivate
+PS C:\test\test_venv1>
+PS C:\test\test_venv1>
+PS C:\test\test_venv1>
+PS C:\test\test_venv1>
+PS C:\test\test_venv1> .\tv1\Scripts\activate
+
+(tv1) PS C:\test\test_venv1> pip install xlwings
+Collecting xlwings
+  Downloading xlwings-0.33.5-cp311-cp311-win_amd64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 7.4 MB/s eta 0:00:00
+Collecting pywin32>=224
+  Downloading pywin32-308-cp311-cp311-win_amd64.whl (6.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 9.3 MB/s eta 0:00:00
+Installing collected packages: pywin32, xlwings
+Successfully installed pywin32-308 xlwings-0.33.5
+
+[notice] A new release of pip available: 22.3.1 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
